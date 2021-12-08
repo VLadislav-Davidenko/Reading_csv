@@ -12,4 +12,8 @@ public class ATB{
     private double cost;
     private int amount;
 
+    public static boolean isEmpty(ATB atb){
+        return atb.getName() == null || !(atb.getCost() >= 0) || atb.getAmount() <= 0;
+    }
+
 }

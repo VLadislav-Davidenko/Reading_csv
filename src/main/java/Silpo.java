@@ -9,4 +9,8 @@ public class Silpo {
     private double cost;
     private int amount;
 
+    public static boolean isEmpty(Silpo slp){
+        return slp.getName() == null || !(slp.getCost() >= 0) || slp.getAmount() <= 0;
+    }
+
 }

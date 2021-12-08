@@ -1,3 +1,0 @@
-Silpo(name=Сахар, cost=22.0, amount=214)
-Silpo(name=Мука, cost=23.0, amount=198)
-Silpo(name=Гречка, cost=31.5, amount=48)

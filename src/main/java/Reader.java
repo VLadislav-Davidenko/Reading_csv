@@ -59,13 +59,15 @@ public class Reader {
                 }
             }
 
-            try(FileWriter fileWriter1 = new FileWriter("atb_res.txt");
-                FileWriter fileWriter2 = new FileWriter("silpo_res.txt")){
+            try(FileWriter fileWriter1 = new FileWriter("atb_res.csv");
+                FileWriter fileWriter2 = new FileWriter("silpo_res.csv")){
+                fileWriter1.write("НАИМЕНОВАНИЕ;ЦЕНА;ШТ;\n");
+                fileWriter2.write("НАИМЕНОВАНИЕ;ЦЕНА;ШТ;\n");
                 for (ATB value : m1.values()) {
-                    fileWriter1.write(value + "\n");
+                    fileWriter1.write(value.getName() + ";" + value.getCost() + ";" + value.getAmount() + ";" + "\n");
                 }
                 for (Silpo value : m2.values()) {
-                    fileWriter2.write(value + "\n");
+                    fileWriter2.write(value.getName() + ";" + value.getCost() + ";" + value.getAmount() + ";" + "\n");
                 }
             } catch (IOException e){
                 e.printStackTrace();
